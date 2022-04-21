@@ -76,3 +76,53 @@ treemap.c:79:17: error: request for member ‘pair’ in something not a structu
 cc1: all warnings being treated as errors
 Compilation failed
 6f2bce1
+Thu Apr 21 15:39:47 UTC 2022: 
+ treemap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:40:21: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     TreeNode *new = (TreeMap *)malloc(sizeof(TreeMap));
+                     ^
+treemap.c:41:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘lower_than’
+     new -> lower_than = lower_than;
+         ^~
+treemap.c:42:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘root’
+     new -> root = NULL;
+         ^~
+treemap.c:43:12: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘current’; did you mean ‘parent’?
+     new -> current = new -> root;
+            ^~~~~~~
+            parent
+treemap.c:43:26: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘root’
+     new -> current = new -> root;
+                          ^~
+treemap.c:44:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return new;
+            ^~~
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:75:3: error: unknown type name ‘Treenode’; did you mean ‘TreeNode’?
+   Treenode *aux = tree->root;
+   ^~~~~~~~
+   TreeNode
+treemap.c:75:19: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   Treenode *aux = tree->root;
+                   ^~~~
+treemap.c:77:35: error: request for member ‘pair’ in something not a structure or union
+     if(tree -> lower_than(key, aux->pair->key)){
+                                   ^~
+treemap.c:78:17: error: request for member ‘left’ in something not a structure or union
+       aux = aux -> left;
+                 ^~
+treemap.c:79:36: error: request for member ‘pair’ in something not a structure or union
+     }else if(tree -> lower_than(aux->pair->key,key)){
+                                    ^~
+treemap.c:80:17: error: request for member ‘right’ in something not a structure or union
+       aux = aux -> right;
+                 ^~
+treemap.c:82:17: error: request for member ‘pair’ in something not a structure or union
+       return aux->pair;
+                 ^~
+cc1: all warnings being treated as errors
+Compilation failed
+9af039d
