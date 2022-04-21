@@ -156,3 +156,9 @@ treemap.c:82:17: error: request for member ‘pair’ in something not a structu
 cc1: all warnings being treated as errors
 Compilation failed
 a21285b
+Thu Apr 21 15:41:09 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|7
+total_score: 5/70
+c4312fa
