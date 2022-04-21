@@ -188,3 +188,18 @@ Thu Apr 21 16:08:25 UTC 2022:
  tests:  13|5
 total_score: 15/70
 a6f835e
+Thu Apr 21 16:08:49 UTC 2022: 
+ treemap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:53:3: error: ‘node’ undeclared (first use in this function)
+   node = createTreeNode(key, value);
+   ^~~~
+treemap.c:53:3: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:55:9: error: ‘true’ undeclared (first use in this function); did you mean ‘tree’?
+   while(true){
+         ^~~~
+         tree
+Compilation failed
+2bf6cc7
