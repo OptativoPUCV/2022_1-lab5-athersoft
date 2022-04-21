@@ -203,3 +203,19 @@ treemap.c:55:9: error: ‘true’ undeclared (first use in this function); did y
          tree
 Compilation failed
 2bf6cc7
+Thu Apr 21 16:09:22 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:53:19: error: invalid initializer
+   TreeNode node = createTreeNode(key, value);
+                   ^~~~~~~~~~~~~~
+treemap.c:60:34: error: incompatible types when assigning to type ‘TreeNode * {aka struct TreeNode *}’ from type ‘TreeNode {aka struct TreeNode}’
+         tree -> current  -> left = node;
+                                  ^
+treemap.c:67:34: error: incompatible types when assigning to type ‘TreeNode * {aka struct TreeNode *}’ from type ‘TreeNode {aka struct TreeNode}’
+         tree -> current -> right = node;
+                                  ^
+Compilation failed
+01e91f9
