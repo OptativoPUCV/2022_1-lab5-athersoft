@@ -670,3 +670,9 @@ treemap.c:211:18: error: format ‘%i’ expects argument of type ‘int’, but
 cc1: all warnings being treated as errors
 Compilation failed
 6658a4b
+Sat Apr 23 21:37:35 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  28|1
+total_score: 65/70
+170e106
