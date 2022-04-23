@@ -168,7 +168,21 @@ Pair * nextTreeMap(TreeMap * tree) {
     if(tree -> lower_than(tree -> current -> pair -> key, tree -> current -> parent -> pair -> key)){
       tree -> current = tree -> current -> parent;
       return tree -> current -> pair;
+    }else{
+      TreeNode *aux = tree -> current;
+      while(tree -> lower_than(tree -> current -> parent -> pair -> key, tree -> current -> pair -> key)){
+        tree -> current = tree -> current -> parent;
+        if(tree -> current -> parent == NULL){
+          break;
+        }
+      }
+      if(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key)){
+        return tree -> current -> pair;
+      }else{
+        return aux -> pair;
+      }
     }
+    
   }
     return NULL;
 }
