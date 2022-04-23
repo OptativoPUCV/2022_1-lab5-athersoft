@@ -170,7 +170,7 @@ Pair * nextTreeMap(TreeMap * tree) {
       return tree -> current -> pair;
     }else{
       TreeNode *aux = tree -> current;
-      while(tree -> lower_than(tree -> current -> parent -> pair -> key, tree -> current -> pair -> key)){
+      while(tree -> lower_than(tree -> current -> parent -> pair -> key, aux -> pair -> key)){
         tree -> current = tree -> current -> parent;
         if(tree -> current -> parent == NULL){
           break;
