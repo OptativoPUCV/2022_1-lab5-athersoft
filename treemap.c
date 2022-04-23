@@ -174,7 +174,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
     
       tree -> current = tree -> current -> left;
       if(tree -> current == NULL){
-        return aux -> pair;
+        if(aux != NULL){
+          return aux -> pair;
+        }else{
+          return NULL;
+        }
       }
     }else{
       return tree -> current -> pair;
