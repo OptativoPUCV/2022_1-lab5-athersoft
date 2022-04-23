@@ -112,7 +112,12 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       tree -> current -> parent -> left = node -> left;
 
     }
+  }else if(node -> right != NULL && node -> left != NULL){
+    node = minimun(node -> right);
+    
   }
+
+  
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

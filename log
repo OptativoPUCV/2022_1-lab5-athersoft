@@ -370,3 +370,18 @@ Sat Apr 23 20:05:53 UTC 2022:
  tests:  17|4
 total_score: 35/70
 be41ced
+Sat Apr 23 20:09:58 UTC 2022: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:116:12: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Werror=implicit-function-declaration]
+     node = minimun(node -> right);
+            ^~~~~~~
+            minimum
+treemap.c:116:10: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     node = minimun(node -> right);
+          ^
+cc1: all warnings being treated as errors
+Compilation failed
+26ec3f8
