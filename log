@@ -461,3 +461,14 @@ Sat Apr 23 20:25:38 UTC 2022:
  tests:  22|2
 total_score: 50/70
 dd20fcf
+Sat Apr 23 20:31:45 UTC 2022: 
+ treemap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:168:10: error: implicit declaration of function ‘lower_than’ [-Werror=implicit-function-declaration]
+       if(lower_than(tree -> current -> parent -> pair -> key,tree -> current -> pair -> key)){
+          ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+20086a8
