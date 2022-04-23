@@ -165,7 +165,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree -> current = minimum(tree->current->right);
     return tree->current->pair;
   }else{
-    if(tree -> lower_than(tree -> current -> key, tree -> current -> parent -> key)){
+    if(tree -> lower_than(tree -> current -> pair -> key, tree -> current -> parent -> pair -> key)){
       tree -> current = tree -> current -> parent;
       return tree -> current;
     }
