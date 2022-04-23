@@ -429,3 +429,17 @@ Sat Apr 23 20:20:44 UTC 2022:
  tests:  20|2
 total_score: 45/70
 8f37460
+Sat Apr 23 20:21:34 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:161:10: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+   return minimum(tree -> root)
+          ^~~~~~~~~~~~~~~~~~~~~
+treemap.c:162:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+66d4b03
