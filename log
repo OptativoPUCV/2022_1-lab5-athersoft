@@ -569,3 +569,20 @@ Sat Apr 23 21:14:41 UTC 2022:
  1 file changed, 20 insertions(+), 2 deletions(-)
  tests:  0|0
 3a928c3
+Sat Apr 23 21:17:10 UTC 2022: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘upperBound’:
+treemap.c:175:6: error: ‘else’ without a previous ‘if’
+     }else{
+      ^~~~
+treemap.c: At top level:
+treemap.c:179:5: error: expected identifier or ‘(’ before ‘return’
+     return NULL;
+     ^~~~~~
+treemap.c:180:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+Compilation failed
+cda090d
