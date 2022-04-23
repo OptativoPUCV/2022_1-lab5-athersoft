@@ -336,3 +336,13 @@ Sat Apr 23 19:58:21 UTC 2022:
  tests:  16|4
 total_score: 30/70
 81878f2
+Sat Apr 23 20:01:16 UTC 2022: 
+ treemap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:96:50: error: lvalue required as left operand of assignment
+   }else if(node -> right != NULL && node -> left = NULL){
+                                                  ^
+Compilation failed
+6472fa5
