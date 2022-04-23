@@ -346,3 +346,9 @@ treemap.c:96:50: error: lvalue required as left operand of assignment
                                                   ^
 Compilation failed
 6472fa5
+Sat Apr 23 20:01:30 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|4
+total_score: 30/70
+ae8b4e6
