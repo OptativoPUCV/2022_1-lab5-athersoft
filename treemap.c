@@ -94,7 +94,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       tree -> current -> parent -> left = NULL;
     }
   }else if(node -> right != NULL && node -> left == NULL){
-    if(tree ->lower_than(tree -> current -> parent -> pair ->           key, node ->pair->key)){
+    if(tree ->lower_than(tree -> current -> parent -> pair -> key, node ->pair->key)){
       node -> right -> parent = tree -> current -> parent;
       tree -> current -> parent -> right = node -> right;
       
@@ -104,7 +104,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
     }
   }else if(node -> right == NULL && node -> left != NULL){
-    if(tree ->lower_than(tree -> current -> parent -> pair ->           key, node ->pair->key)){
+    if(tree ->lower_than(tree -> current -> parent -> pair -> key, node ->pair->key)){
       node -> left -> parent = tree -> current -> parent;
       tree -> current -> parent -> right = node -> left;
     }else{
@@ -115,9 +115,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
   }else if(node -> right != NULL && node -> left != NULL){
     TreeNode *node_aux = minimum(node -> right);
     node -> pair -> key = node_aux -> pair -> key;
-    node -> pair -> value = node_aux -> pair -> value;
-    //removeNode(tree, minimum(node->right));
-    
+    node -> pair -> value = node_aux -> pair -> value; 
   }
 
   
@@ -153,6 +151,26 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
+  tree -> current = tree -> root;
+  TreeNode *aux = NULL;
+  while(1){
+    if(tree -> lower_than(tree -> current -> pair -> key, key)){
+      tree -> current = tree -> current -> right;
+      if(tree -> current == NULL){
+        return aux -> pair;
+      }
+    }else if(tree -> lower_than(key, tree -> current -> pair -> key)){
+      if(tree->lower_than(tree -> current -> pair -> key, aux -> pair -> key)){
+        aux = tree -> current;
+      }
+      tree -> current = tree -> current -> left;
+      if(tree -> current == NULL){
+        return aux -> pair;
+      }
+    }else{
+      return tree -> current -> pair;
+    }
+  }
     return NULL;
 }
 
