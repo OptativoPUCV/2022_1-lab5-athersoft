@@ -164,6 +164,11 @@ Pair * nextTreeMap(TreeMap * tree) {
   if(tree -> current -> right != NULL){
     tree -> current = minimum(tree->current->right);
     return tree->current->pair;
+  }else{
+    if(tree -> lower_than(tree -> current -> key, tree -> current -> parent -> key)){
+      tree -> current = tree -> current -> parent;
+      return tree -> current;
+    }
   }
     return NULL;
 }

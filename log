@@ -512,3 +512,20 @@ Sat Apr 23 20:38:22 UTC 2022:
  tests:  22|2
 total_score: 50/70
 1fb84c7
+Sat Apr 23 20:44:23 UTC 2022: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:168:43: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(tree -> lower_than(tree -> current -> key, tree -> current -> parent -> key)){
+                                           ^~
+treemap.c:168:77: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(tree -> lower_than(tree -> current -> key, tree -> current -> parent -> key)){
+                                                                             ^~
+treemap.c:170:19: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+       return tree -> current;
+              ~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+aeb5235
