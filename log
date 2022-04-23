@@ -249,3 +249,23 @@ Thu Apr 21 16:19:18 UTC 2022:
  tests:  15|4
 total_score: 25/70
 1a81542
+Sat Apr 23 19:55:55 UTC 2022: 
+ treemap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:90:20: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+   if(node -> right = NULL && node -> left == NULL{
+                    ^
+treemap.c:90:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   if(node -> right = NULL && node -> left == NULL{
+      ^~~~
+treemap.c:90:50: error: expected ‘)’ before ‘{’ token
+   if(node -> right = NULL && node -> left == NULL{
+                                                  ^
+treemap.c:97:1: error: expected expression before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+7bad814
