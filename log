@@ -330,3 +330,9 @@ treemap.c:91:8: error: implicit declaration of function ‘lower_than’ [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 8fa8cf3
+Sat Apr 23 19:58:21 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|4
+total_score: 30/70
+81878f2
