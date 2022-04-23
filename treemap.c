@@ -157,7 +157,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
     if(tree -> lower_than(tree -> current -> pair -> key, key)){
       tree -> current = tree -> current -> right;
       if(tree -> current == NULL){
-        return aux -> pair;
+        if(aux != NULL){
+          return aux -> pair;
+        }else{
+          return NULL;
+        }
       }
     }else if(tree -> lower_than(key, tree -> current -> pair -> key)){
       if(aux != NULL){
