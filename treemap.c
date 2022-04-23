@@ -208,7 +208,6 @@ Pair * nextTreeMap(TreeMap * tree) {
         }
       }
       if(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key)){
-        printf("aaaaaaaaaaaaaaaaaaaaaaa%p", tree -> current -> pair -> key);
         return tree -> current -> pair;
       }else{
         return NULL;
