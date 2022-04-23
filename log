@@ -282,3 +282,23 @@ treemap.c:97:1: error: expected expression before ‘}’ token
  ^
 Compilation failed
 e6c6fd1
+Sat Apr 23 19:56:20 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:90:47: error: expected expression before ‘)’ token
+   if(node -> right == NULL && node -> left == ){
+                                               ^
+treemap.c:91:8: error: implicit declaration of function ‘lower_than’ [-Werror=implicit-function-declaration]
+     if(lower_than(tree -> current -> parent -> key, node ->key)){
+        ^~~~~~~~~~
+treemap.c:91:45: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(lower_than(tree -> current -> parent -> key, node ->key)){
+                                             ^~
+treemap.c:91:58: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(lower_than(tree -> current -> parent -> key, node ->key)){
+                                                          ^~
+cc1: all warnings being treated as errors
+Compilation failed
+8fa5e40
