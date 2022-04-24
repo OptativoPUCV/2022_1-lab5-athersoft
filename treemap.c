@@ -201,7 +201,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     while(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key) && tree -> current -> parent != NULL){
       tree -> current = tree -> current -> parent;
     }
-    f(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key)){
+    if(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key)){
         return tree -> current -> pair;
       }else{
         return NULL;
