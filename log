@@ -688,3 +688,30 @@ Sat Apr 23 21:39:15 UTC 2022:
  tests:  28|1
 total_score: 65/70
 e86dba8
+Sun Apr 24 18:00:02 UTC 2022: 
+ treemap.c | 15 +++------------
+ 1 file changed, 3 insertions(+), 12 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:204:5: error: implicit declaration of function ‘f’ [-Werror=implicit-function-declaration]
+     f(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key)){
+     ^
+treemap.c:204:78: error: expected ‘;’ before ‘{’ token
+     f(tree -> lower_than(aux -> pair -> key, tree -> current -> pair -> key)){
+                                                                              ^
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:606:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fdf2d3c
